@@ -10,21 +10,58 @@
         background-color: #f9fafb;
       }
       header {
+        position: relative;
         text-align: center;
-        padding: 4rem 1rem;
-        background: url('images/hero.jpg') center/cover no-repeat;
+        padding: 6rem 1rem;
         color: white;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .parallax-bg {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        background: url('images/hero.jpg') center/cover no-repeat;
+        will-change: transform;
+        z-index: 0;
+      }
+      header::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
       }
       header h1 {
-        font-size: 2.8rem;
+        font-size: 3rem;
         margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 2;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       }
       header p {
-        font-size: 1.2rem;
-        opacity: 0.9;
+        font-size: 1.3rem;
+        opacity: 0.95;
+        position: relative;
+        z-index: 2;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
       }
       section img {
         border-radius: 8px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .parallax-bg {
+          transform: none !important;
+        }
       }
     </style>
   </head>
@@ -42,6 +79,7 @@
     </nav>
 
     <header>
+      <div class="parallax-bg" id="parallaxBg"></div>
       <h1>Goulet & Co.</h1>
       <p>Your local partner for instrument rentals, repairs, and accessories.</p>
     </header>
@@ -113,5 +151,23 @@
         <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
       </small>
     </footer>
+    
+    <script>
+      let ticking = false;
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const parallaxBg = document.getElementById('parallaxBg');
+            if (parallaxBg) {
+              parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    </script>
   </body>
 </html>
