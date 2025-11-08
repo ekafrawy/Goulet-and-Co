@@ -1,0 +1,1 @@
+User requested Option B: local images and local PicoCSS version of the Goulet & Co. redesign. The project should include index.html, css/pico.min.css, and /images folder with Unsplash assets.

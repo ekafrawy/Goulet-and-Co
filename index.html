@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Goulet & Co. | Music Instrument Rentals, Repairs & Accessories</title>
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <style>
+      body {
+        background-color: #f9fafb;
+      }
+      header {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: url('images/hero.jpg') center/cover no-repeat;
+        color: white;
+      }
+      header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+      }
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+      section img {
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container-fluid">
+      <ul>
+        <li><strong>Goulet & Co.</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#rent">Rent</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#repairs">Repairs</a></li>
+        <li><a href="#contact" role="button">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <h1>Goulet & Co.</h1>
+      <p>Your local partner for instrument rentals, repairs, and accessories.</p>
+    </header>
+
+    <main class="container">
+      <div class="grid">
+        <section id="rent">
+          <hgroup>
+            <h2>Rent an Instrument</h2>
+            <h3>Flexible plans for students and professionals</h3>
+          </hgroup>
+          <p>Find the perfect instrument to match your skill level and budget. Choose from a wide selection of quality band and orchestra instruments.</p>
+          <figure>
+            <img src="images/rent.jpg" alt="Students playing instruments" />
+            <figcaption><a href="https://unsplash.com/photos/ZzOa5G8hSPI" target="_blank">Photo from Unsplash</a></figcaption>
+          </figure>
+          <h3>Easy Online Rental</h3>
+          <p>Start your rental online and pick up in-store or have it delivered to your school.</p>
+        </section>
+
+        <section id="accessories">
+          <hgroup>
+            <h2>Purchase Accessories</h2>
+            <h3>Everything you need to play your best</h3>
+          </hgroup>
+          <p>We carry reeds, strings, sheet music, cases, and more — all carefully selected for durability and sound quality.</p>
+          <figure>
+            <img src="images/accessories.jpg" alt="Instrument accessories" />
+            <figcaption><a href="https://unsplash.com/photos/9l_326FISzk" target="_blank">Photo from Unsplash</a></figcaption>
+          </figure>
+          <h3>Shop In-Store or Online</h3>
+          <p>Convenient options to get the accessories you need — fast.</p>
+        </section>
+
+        <section id="repairs">
+          <hgroup>
+            <h2>Instrument Repairs</h2>
+            <h3>Expert care to keep you playing beautifully</h3>
+          </hgroup>
+          <p>Our technicians specialize in brass, woodwind, and string repairs — from quick adjustments to full restorations.</p>
+          <figure>
+            <img src="images/repairs.jpg" alt="Instrument repair workshop" />
+            <figcaption><a href="https://unsplash.com/photos/JtV6zyOZSrA" target="_blank">Photo from Unsplash</a></figcaption>
+          </figure>
+          <h3>Schedule a Repair</h3>
+          <p>Contact us today to book an evaluation — most small repairs are completed within a few days.</p>
+        </section>
+      </div>
+    </main>
+
+    <section id="contact" aria-label="Subscribe example">
+      <div class="container">
+        <article>
+          <hgroup>
+            <h2>Stay Connected</h2>
+            <h3>Join our newsletter for updates and special offers</h3>
+          </hgroup>
+          <form class="grid">
+            <input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required />
+            <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required />
+            <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <footer class="container">
+      <small>
+        <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+      </small>
+    </footer>
+  </body>
+</html>
